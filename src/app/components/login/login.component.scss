@@ -1,0 +1,80 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  max-width: 100%;
+  height: 100dvh;
+}
+
+.logo {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.sign-container {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 12px;
+
+  button {
+    border-radius: 8px;
+    background: var(--version-2-main-color, #4589ff);
+    color: white;
+    padding: 10px 16px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: 400;
+  }
+}
+
+.legal-container {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  padding: 8px;
+  gap: 12px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  padding: 48px 115px;
+  justify-content: center;
+  align-items: center;
+  gap: 39px;
+  border-radius: 30px;
+  background: var(--white, #fff);
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.08);
+  width: 25%;
+  h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+  }
+}
+
+.container-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.blue-seperator {
+  display: flex;
+  flex-direction: row;
+  width: 110%;
+  height: 2px;
+  background-color: #4589ff;
+}
