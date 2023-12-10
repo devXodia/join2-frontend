@@ -2,7 +2,7 @@
   <img class="logo" src="../../../assets/img/logo.svg" />
   <div class="sign-container">
     <span>Not a Join User?</span>
-    <button>Sign Up</button>
+    <button class="signup-btn">Sign Up</button>
   </div>
   <div class="legal-container">
     <a href="#">Privacy Policy</a>
@@ -16,17 +16,37 @@
     <form>
       <div class="inputs">
         <div class="email">
-          <input placeholder="Email" required />
+          <input
+            [(ngModel)]="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
           <img src="../../../assets/img/mail.svg" />
         </div>
         <div class="pwd">
-          <input placeholder="Password" required />
+          <input [(ngModel)]="pwd" name="pwd" placeholder="Password" required />
           <img src="../../../assets/img/lock.svg" />
         </div>
       </div>
       <div class="remember-me">
-        <input type="checkbox" />
+        @if(checkbox){
+        <img
+          (click)="changeCheckbox()"
+          src="../../../assets/img/checkbox.svg"
+        />
+        } @else {
+        <img
+          class="checked"
+          (click)="changeCheckbox()"
+          src="../../../assets/img/checked.svg"
+        />
+        }
         <span>Remember Me</span>
+      </div>
+      <div class="buttons-container">
+        <button class="login">Log In</button>
+        <button class="guest">Guest Log In</button>
       </div>
     </form>
   </div>
