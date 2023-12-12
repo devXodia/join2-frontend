@@ -1,16 +1,12 @@
 <div class="main-container">
-  <img class="logo" src="../../../assets/img/logo.svg" />
-  <div class="sign-container">
-    <span>Not a Join User?</span>
-    <button routerLink="/register" class="signup-btn">Sign Up</button>
-  </div>
+  <img class="logo" src="../../../assets/img/logo-white.svg" />
   <div class="legal-container">
     <a href="#">Privacy Policy</a>
     <a href="#">Legal Notice</a>
   </div>
-  <div class="login-container">
+  <div class="signup-container">
     <div class="container-header">
-      <h1>Log In</h1>
+      <h1>Sign Up</h1>
       <div class="blue-seperator"></div>
     </div>
     <form>
@@ -28,8 +24,17 @@
           <input [(ngModel)]="pwd" name="pwd" placeholder="Password" required />
           <img src="../../../assets/img/lock.svg" />
         </div>
+        <div class="confirm-pwd">
+          <input
+            [(ngModel)]="confirmPwd"
+            name="pwd"
+            placeholder="Confirm Password"
+            required
+          />
+          <img src="../../../assets/img/lock.svg" />
+        </div>
       </div>
-      <div class="remember-me">
+      <div class="tos-container">
         @if(checkbox){
         <img
           (click)="changeCheckbox()"
@@ -42,11 +47,10 @@
           src="../../../assets/img/checked.svg"
         />
         }
-        <span>Remember Me</span>
+        <span>I accept the Privacy Policy</span>
       </div>
       <div class="buttons-container">
-        <button class="login">Log In</button>
-        <button class="guest">Guest Log In</button>
+        <button class="login">Sign Up</button>
       </div>
     </form>
   </div>
