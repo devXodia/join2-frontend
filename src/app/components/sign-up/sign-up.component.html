@@ -5,12 +5,21 @@
     <a href="#">Legal Notice</a>
   </div>
   <div class="signup-container">
+    <img
+      class="arrow"
+      routerLink="/"
+      src="../../../assets/img/arrow-left.svg"
+    />
     <div class="container-header">
       <h1>Sign Up</h1>
       <div class="blue-seperator"></div>
     </div>
     <form>
       <div class="inputs">
+        <div class="name">
+          <input [(ngModel)]="email" name="name" placeholder="Name" required />
+          <img src="../../../assets/img/person.svg" />
+        </div>
         <div class="email">
           <input
             [(ngModel)]="email"

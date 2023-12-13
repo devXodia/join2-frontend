@@ -10,6 +10,7 @@ export class SignUpComponent {
   email: string = '';
   pwd: string = '';
   confirmPwd: string = '';
+  name: string = '';
 
   changeCheckbox() {
     this.checkbox = !this.checkbox;

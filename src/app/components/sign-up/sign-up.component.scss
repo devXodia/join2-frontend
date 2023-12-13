@@ -30,7 +30,7 @@
   bottom: 50px;
   display: flex;
   padding: 8px;
-  gap: 12px;
+  gap: 42px;
   a {
     text-decoration: none;
     color: white;
@@ -38,6 +38,7 @@
 }
 
 .signup-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 48px 115px;
@@ -90,7 +91,8 @@ form {
 
 .email,
 .pwd,
-.confirm-pwd {
+.confirm-pwd,
+.name {
   position: relative;
   display: flex;
   padding: 12px;
@@ -192,6 +194,18 @@ form {
   &:hover {
     color: #4589ff;
     border: 1px solid #4589ff;
+    cursor: pointer;
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  padding: 8px;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 100%;
     cursor: pointer;
   }
 }
