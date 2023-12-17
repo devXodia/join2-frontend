@@ -50,18 +50,21 @@
 }
 
 .sidebar {
-  width: 20%;
+  width: 15%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 66px 0px;
+  padding: 38px 0px;
 
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
 }
 
-.content {
-  width: 80%;
+.content-container {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-items {
@@ -77,7 +80,7 @@
   display: flex;
   gap: 8px;
   align-items: center;
-  width: 180px;
+  width: 70%;
   padding: 8px;
   justify-content: center;
   border-radius: 8px;
@@ -104,7 +107,7 @@
   align-items: center;
 
   span {
-    width: 180px;
+    width: 70%;
     text-align: center;
     padding: 8px;
     border-radius: 8px;
@@ -113,4 +116,98 @@
       cursor: pointer;
     }
   }
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 72px;
+  text-align: center;
+}
+
+.name {
+  color: #4589ff;
+}
+
+.task-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.task-container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.left {
+  display: flex;
+  width: 70%;
+  height: 100%;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+  padding: 25px;
+  border-radius: 30px;
+  gap: 32px;
+  &:hover {
+    background-color: #4589ff;
+    color: white;
+    cursor: pointer;
+
+    .seperator {
+      background-color: white;
+    }
+
+    img {
+      border: 4px solid #fff;
+      border-radius: 100%;
+      height: 60px;
+      width: 60px;
+    }
+  }
+}
+
+.deadline-container {
+  height: 20%;
+}
+
+.content-container {
+  width: 100%;
+  padding: 100px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+.seperator {
+  height: 100%;
+  width: 5px;
+  background-color: black;
+  border-radius: 8px;
+}
+
+.date-container {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  justify-content: center;
+  align-items: center;
+}
+
+.date {
+  font-size: 33px;
+  font-weight: 700;
+}
+
+.date-text {
+  font-size: 23px;
+  font-weight: 400;
 }
