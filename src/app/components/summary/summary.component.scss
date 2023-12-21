@@ -155,6 +155,11 @@
   padding: 25px;
   border-radius: 30px;
   gap: 32px;
+
+  img {
+    border: 4px solid transparent;
+  }
+
   &:hover {
     background-color: #4589ff;
     color: white;
@@ -167,14 +172,16 @@
     img {
       border: 4px solid #fff;
       border-radius: 100%;
-      height: 60px;
-      width: 60px;
+      // height: 60px;
+      // width: 60px;
     }
   }
 }
 
 .deadline-container {
   height: 20%;
+  display: flex;
+  gap: 32px;
 }
 
 .content-container {
@@ -209,5 +216,43 @@
 
 .date-text {
   font-size: 23px;
+  align-self: start;
   font-weight: 400;
+}
+
+.task-name {
+  font-size: 23px;
+  font-weight: 400;
+}
+
+.board-container {
+  display: flex;
+  gap: 13px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 30px;
+  height: 100%;
+  padding: 25px;
+  width: 20%;
+
+  img {
+    // width: 77px;
+    // height: 77px;
+    border: 4px solid transparent;
+  }
+
+  &:hover {
+    background-color: #d2e3ff;
+    color: #4589ff;
+    cursor: pointer;
+
+    img {
+      border: 4px solid #fff;
+      border-radius: 100%;
+      // height: 60px;
+      // width: 60px;
+    }
+  }
 }
