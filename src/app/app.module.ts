@@ -10,9 +10,10 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { SummaryComponent } from './components/summary/summary.component';
+import { BoardComponent } from './components/board/board.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, SignUpComponent, SummaryComponent],
+  declarations: [AppComponent, LoginComponent, SignUpComponent, SummaryComponent, BoardComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
