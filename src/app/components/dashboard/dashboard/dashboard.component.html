@@ -1,0 +1,40 @@
+<div class="main-container">
+    <div class="header">
+      <img class="logo" src="../../../assets/img/logo-white.svg" />
+      <div class="nav">
+        <span>Kanban Project Management Tool </span>
+        <img class="help" src="../../../assets/img/help.svg" />
+        <img class="user-img" src="../../../assets/img/SM.svg" />
+      </div>
+    </div>
+    <div class="main-screen">
+      <div class="sidebar">
+        <div class="nav-items">
+          <div routerLink="/dashboard/summary" class="item">
+            <img src="../../../assets/img/summary.svg" />
+            <span>Summary</span>
+          </div>
+          <div routerLink="/dashboard/board" class="item">
+            <img src="../../../assets/img/board-side.svg" />
+            <span>Board</span>
+          </div>
+          <div routerLink="/dashboard/add-task" class="item">
+            <img src="../../../assets/img/addtask.svg" />
+            <span>Add Task</span>
+          </div>
+          <div routerLink="/dashboard/contacts" class="item">
+            <img src="../../../assets/img/contacts.svg" />
+            <span>Contacts</span>
+          </div>
+        </div>
+        <div class="tos">
+          <span>Privacy Policy</span>
+          <span>Legal Notice</span>
+        </div>
+      </div>
+      <div class="content-container">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  
