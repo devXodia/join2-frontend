@@ -11,18 +11,23 @@
   width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
   height: 100%;
 }
 
 .title {
-  color: gray;
+  color: black;
   font-size: 32px;
   border: 0;
   border-bottom: 1px #d1d1d1 solid;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+  padding: 0;
+}
+
+.title::placeholde {
+  color: gray;
 }
 
 .title:focus {
@@ -67,34 +72,47 @@
 .due-date-title {
   font-size: 19px;
   color: #42526e;
-  margin-bottom: 8px;
   font-weight: 700;
 }
 
 .date {
-  color: gray;
-  font-size: 32px;
+  font-size: 19px;
   border: 0;
   border-bottom: 1px #d1d1d1 solid;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
   outline: none;
+  width: 71%;
 }
 
 .date::placeholder {
   font-size: 19px;
   font-weight: 500;
   font-family: "Open Sans";
+  color: gray;
+}
+
+.mat-datepicker-input {
+  padding: 0;
 }
 
 .input-due-date-box {
   position: relative;
+  padding: 0px 0px 0px 0px !important;
+  display: flex;
+  flex-direction: column;
 }
 
-.date-picker-img {
-  position: absolute;
-  top: 5px;
-  right: 30%;
+.due-date-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+mat-datepicker-toggle {
+  position: absolute !important;
+  top: -23px !important;
+  right: 30% !important;
   cursor: pointer;
 }

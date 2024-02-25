@@ -15,8 +15,24 @@
     <div class="due-date-container">
       <span class="due-date-title">Due date</span>
       <div class="input-due-date-box">
-        <input class="date" placeholder="DD/MM/YYYY" />
-        <img class="date-picker-img" src="../../../../assets/img/date.png" />
+        <input
+          matInput
+          [matDatepicker]="picker"
+          [min]="todayDate"
+          class="date"
+          placeholder="DD/MM/YYYY"
+        />
+        @if(this.error){
+        <span class="error-invalid-date"
+          >Invalid Date. Please pick a Date from Today or in the future.</span
+        >
+        }
+
+        <mat-datepicker-toggle
+          matIconSuffix
+          [for]="picker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #picker color="primary"></mat-datepicker>
       </div>
     </div>
   </div>

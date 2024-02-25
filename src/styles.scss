@@ -1,4 +1,9 @@
 body {
   margin: 0;
-  font-family: "Open Sans";
+  font-family: "Open Sans" !important;
+}
+
+html,
+body {
+  height: 100%;
 }
