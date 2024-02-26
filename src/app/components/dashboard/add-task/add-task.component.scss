@@ -69,7 +69,8 @@
   }
 }
 
-.due-date-title {
+.due-date-title,
+.prio-title {
   font-size: 19px;
   color: #42526e;
   font-weight: 700;
@@ -114,5 +115,25 @@ mat-datepicker-toggle {
   position: absolute !important;
   top: -23px !important;
   right: 30% !important;
+  cursor: pointer;
+}
+
+.prio-container {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.prio-boxes-btns-container {
+  display: flex;
+  gap: 8px;
+}
+
+.urgent,
+.medium,
+.low {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }

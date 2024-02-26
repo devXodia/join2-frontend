@@ -3,6 +3,7 @@
     <div class="task-title">
       <input class="title" placeholder="Enter a title" />
     </div>
+
     <div class="task-description-container">
       <span class="description-title"
         ><b class="bold">Description</b> (optional)</span
@@ -12,6 +13,7 @@
         class="description"
       ></textarea>
     </div>
+
     <div class="due-date-container">
       <span class="due-date-title">Due date</span>
       <div class="input-due-date-box">
@@ -33,6 +35,60 @@
           [for]="picker"
         ></mat-datepicker-toggle>
         <mat-datepicker #picker color="primary"></mat-datepicker>
+      </div>
+    </div>
+
+    <div class="prio-container">
+      <span class="prio-title">Priority</span>
+
+      <div class="prio-boxes-btns-container">
+        <div class="urgent">
+          @if(urgent){
+          <img
+            (click)="changeUrgentPrio()"
+            src="../../../../assets/img/urgent_full_red.png"
+            class="prio-img"
+          />
+          } @else {
+          <img
+            (click)="changeUrgentPrio()"
+            src="../../../../assets/img/urgent_full_white.png"
+            class="prio-img"
+          />
+          }
+        </div>
+
+        <div class="medium">
+          @if(medium){
+          <img
+            (click)="changeMediumPrio()"
+            src="../../../../assets/img/medium_full_orange.png"
+            class="prio-img"
+          />
+          } @else {
+          <img
+            (click)="changeMediumPrio()"
+            src="../../../../assets/img/medium_full_white.png"
+            class="prio-img"
+          />
+          }
+        </div>
+
+        <div class="low">
+          @if(low){
+          <img
+            (click)="changeLowPrio()"
+            src="../../../../assets/img/low_full_green.png"
+            class="prio-img"
+          />
+          } @else {
+          <img
+            (click)="changeLowPrio()"
+            src="../../../../assets/img/low_full_white.png"
+            class="prio-img"
+          />
+          }
+        </div>
       </div>
     </div>
   </div>
