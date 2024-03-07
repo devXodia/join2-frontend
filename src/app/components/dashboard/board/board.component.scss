@@ -25,16 +25,19 @@
     width: 30px;
     height: 30px;
     justify-self: flex-end !important;
+    cursor: pointer;
   }
 
   input {
     border: none;
     width: 80%;
+    outline: none;
+    font-size: 18px;
   }
 
   input::placeholder {
     color: #d1d1d1;
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -46,6 +49,7 @@
 
 .add-task-btn {
   background-color: #4589ff;
+  font-weight: 400;
   color: white;
   border-style: none;
   border: 1px solid #4589ff;
