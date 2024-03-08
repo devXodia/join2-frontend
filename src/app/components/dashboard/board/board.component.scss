@@ -3,7 +3,7 @@
   max-height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 50px;
   padding: 80px;
 }
 
@@ -70,4 +70,34 @@
   span {
     font-size: 27px;
   }
+}
+
+.to-do-section,
+.progress-section,
+.feedback-section,
+.done-section {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 23px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #42526e;
+
+  img {
+    height: 24px;
+    cursor: pointer;
+  }
+}
+
+.board-section {
+  display: flex;
+  flex: 1;
+  gap: 24px;
 }

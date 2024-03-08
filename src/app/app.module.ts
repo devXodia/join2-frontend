@@ -16,6 +16,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatError, MatFormField, MatLabel } from '@angular/material/form-field';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { MatError, MatFormField, MatLabel } from '@angular/material/form-field';
     MatFormField,
     MatLabel,
     MatError,
+    DragDropModule,
   ],
   providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],
