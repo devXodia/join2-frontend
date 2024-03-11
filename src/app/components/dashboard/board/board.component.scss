@@ -160,13 +160,18 @@
   gap: 5px;
 }
 
+mat-progress-bar {
+  width: 60%;
+}
+
 .task-card-subtasks {
   display: flex;
   gap: 10px;
-}
+  align-items: center;
 
-.loading-bar {
-  width: 50%;
+  span {
+    font-size: 13px;
+  }
 }
 
 .task-footer {

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import {
   BrowserModule,
   provideClientHydration,
@@ -17,6 +17,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatError, MatFormField, MatLabel } from '@angular/material/form-field';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressBar } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     MatLabel,
     MatError,
     DragDropModule,
+    MatProgressBarModule,
+    MatProgressBar,
   ],
   providers: [provideClientHydration(), provideAnimationsAsync()],
   bootstrap: [AppComponent],

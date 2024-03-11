@@ -36,14 +36,19 @@
         />
       </div>
       <div class="task-container">
-        <div class="task-card">
+        <div class="task-card" cdkDrag>
           <span class="task-category">User Story</span>
           <div class="task-card-titles">
             <span class="task-card-title">Test Card</span>
             <span class="task-card-description">This is a description.</span>
           </div>
+
           <div class="task-card-subtasks">
-            <span class="loading-bar">Loading Bar</span>
+            <mat-progress-bar
+              mode="determinate"
+              color="#4589FF"
+              value="70"
+            ></mat-progress-bar>
             <span clas="amount-subtasks">1/2 Subtasks</span>
           </div>
           <div class="task-footer">
