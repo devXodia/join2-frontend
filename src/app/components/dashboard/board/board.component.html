@@ -22,34 +22,24 @@
           src="../../../../assets/img/add-task-board-btn.png"
         />
       </div>
-      <div class="task-container">
-        <div class="no-tasks"><span>No tasks</span></div>
-      </div>
-    </div>
-
-    <div class="progress-section">
-      <div class="section-title">
-        <span class="title">In progress</span>
-        <img
-          class="task-icon"
-          src="../../../../assets/img/add-task-board-btn.png"
-        />
-      </div>
-      <div class="task-container">
+      <div cdkDropListGroup class="task-container">
+        @if(todo.length > 0){ @for(todoTask of todo; track todoTask){
         <div class="task-card" cdkDrag>
-          <span class="task-category">User Story</span>
+          <span class="task-category">{{ todoTask.category }}</span>
           <div class="task-card-titles">
-            <span class="task-card-title">Test Card</span>
-            <span class="task-card-description">This is a description.</span>
+            <span class="task-card-title">{{ todoTask.title }}</span>
+            <span class="task-card-description">{{
+              todoTask.description
+            }}</span>
           </div>
 
           <div class="task-card-subtasks">
             <mat-progress-bar
               mode="determinate"
               color="#4589FF"
-              value="70"
+              value="{{ todoTask.subtasks?.length }}"
             ></mat-progress-bar>
-            <span clas="amount-subtasks">1/2 Subtasks</span>
+            <span clas="amount-subtasks">{{ todoTask.subtasks?.length }}</span>
           </div>
           <div class="task-footer">
             <div class="task-assigned-contacts">
@@ -61,6 +51,55 @@
             />
           </div>
         </div>
+        } } @else {
+        <div class="no-tasks"><span>No tasks</span></div>
+        }
+      </div>
+    </div>
+
+    <div class="progress-section">
+      <div class="section-title">
+        <span class="title">In progress</span>
+        <img
+          class="task-icon"
+          src="../../../../assets/img/add-task-board-btn.png"
+        />
+      </div>
+      <div cdkDropListGroup class="task-container">
+        @if(progress.length > 0){ @for(progressTask of progress; track
+        progressTask){
+        <div class="task-card" cdkDrag>
+          <span class="task-category">{{ progressTask.category }}</span>
+          <div class="task-card-titles">
+            <span class="task-card-title">{{ progressTask.title }}</span>
+            <span class="task-card-description">{{
+              progressTask.description
+            }}</span>
+          </div>
+
+          <div class="task-card-subtasks">
+            <mat-progress-bar
+              mode="determinate"
+              color="#4589FF"
+              value="{{ progressTask.subtasks?.length }}"
+            ></mat-progress-bar>
+            <span clas="amount-subtasks">{{
+              progressTask.subtasks?.length
+            }}</span>
+          </div>
+          <div class="task-footer">
+            <div class="task-assigned-contacts">
+              <img src="../../../../assets/img/test-contanct-images.png" />
+            </div>
+            <img
+              class="task-card-prio"
+              src="../../../../assets/img/task-card-medium-prio.png"
+            />
+          </div>
+        </div>
+        } } @else {
+        <div class="no-tasks"><span>No tasks</span></div>
+        }
       </div>
     </div>
 
@@ -72,14 +111,81 @@
           src="../../../../assets/img/add-task-board-btn.png"
         />
       </div>
-      <div class="task-container"></div>
+      <div cdkDropListGroup class="task-container">
+        @if(feedback.length > 0){ @for(feedbackTask of feedback; track
+        feedbackTask){
+        <div class="task-card" cdkDrag>
+          <span class="task-category">{{ feedbackTask.category }}</span>
+          <div class="task-card-titles">
+            <span class="task-card-title">{{ feedbackTask.title }}</span>
+            <span class="task-card-description">{{
+              feedbackTask.description
+            }}</span>
+          </div>
+
+          <div class="task-card-subtasks">
+            <mat-progress-bar
+              mode="determinate"
+              color="#4589FF"
+              value="{{ feedbackTask.subtasks?.length }}"
+            ></mat-progress-bar>
+            <span clas="amount-subtasks">{{
+              feedbackTask.subtasks?.length
+            }}</span>
+          </div>
+          <div class="task-footer">
+            <div class="task-assigned-contacts">
+              <img src="../../../../assets/img/test-contanct-images.png" />
+            </div>
+            <img
+              class="task-card-prio"
+              src="../../../../assets/img/task-card-medium-prio.png"
+            />
+          </div>
+        </div>
+        } } @else {
+        <div class="no-tasks"><span>No tasks</span></div>
+        }
+      </div>
     </div>
 
     <div class="done-section">
       <div class="section-title">
         <span class="title">Done</span>
       </div>
-      <div class="task-container"></div>
+      <div cdkDropListGroup class="task-container">
+        @if(done.length > 0){ @for(doneTask of feedback; track doneTask){
+        <div class="task-card" cdkDrag>
+          <span class="task-category">{{ doneTask.category }}</span>
+          <div class="task-card-titles">
+            <span class="task-card-title">{{ doneTask.title }}</span>
+            <span class="task-card-description">{{
+              doneTask.description
+            }}</span>
+          </div>
+
+          <div class="task-card-subtasks">
+            <mat-progress-bar
+              mode="determinate"
+              color="#4589FF"
+              value="{{ doneTask.subtasks?.length }}"
+            ></mat-progress-bar>
+            <span clas="amount-subtasks">{{ doneTask.subtasks?.length }}</span>
+          </div>
+          <div class="task-footer">
+            <div class="task-assigned-contacts">
+              <img src="../../../../assets/img/test-contanct-images.png" />
+            </div>
+            <img
+              class="task-card-prio"
+              src="../../../../assets/img/task-card-medium-prio.png"
+            />
+          </div>
+        </div>
+        } } @else {
+        <div class="no-tasks"><span>No tasks</span></div>
+        }
+      </div>
     </div>
   </div>
 </div>
