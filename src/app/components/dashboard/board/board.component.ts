@@ -26,6 +26,6 @@ export class BoardComponent {
       subtasks: [],
     };
 
-    this.todo.push(newTask);
+    this.progress.push(newTask);
   }
 }
