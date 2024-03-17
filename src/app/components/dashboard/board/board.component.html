@@ -13,7 +13,7 @@
     <button class="add-task-btn">Add task <span>+ </span></button>
   </div>
 
-  <div class="board-section">
+  <div class="board-section" cdkDropListGroup>
     <div class="to-do-section">
       <div class="section-title">
         <span class="title">To do</span>
@@ -22,7 +22,12 @@
           src="../../../../assets/img/add-task-board-btn.png"
         />
       </div>
-      <div cdkDropListGroup class="task-container">
+      <div
+        cdkDropList
+        [cdkDropListData]="todo"
+        (cdkDropListDropped)="onDrop($event)"
+        class="task-container"
+      >
         @if(todo.length > 0){ @for(todoTask of todo; track todoTask){
         <div class="task-card" cdkDrag>
           <span class="task-category">{{ todoTask.category }}</span>
@@ -65,7 +70,12 @@
           src="../../../../assets/img/add-task-board-btn.png"
         />
       </div>
-      <div cdkDropListGroup class="task-container">
+      <div
+        cdkDropList
+        [cdkDropListData]="progress"
+        (cdkDropListDropped)="onDrop($event)"
+        class="task-container"
+      >
         @if(progress.length > 0){ @for(progressTask of progress; track
         progressTask){
         <div class="task-card" cdkDrag>
@@ -111,7 +121,12 @@
           src="../../../../assets/img/add-task-board-btn.png"
         />
       </div>
-      <div cdkDropListGroup class="task-container">
+      <div
+        cdkDropList
+        [cdkDropListData]="feedback"
+        (cdkDropListDropped)="onDrop($event)"
+        class="task-container"
+      >
         @if(feedback.length > 0){ @for(feedbackTask of feedback; track
         feedbackTask){
         <div class="task-card" cdkDrag>
@@ -153,7 +168,13 @@
       <div class="section-title">
         <span class="title">Done</span>
       </div>
-      <div cdkDropListGroup class="task-container">
+      <div
+        cdkDropList
+        #doneList="cdkDropList"
+        [cdkDropListData]="done"
+        (cdkDropListDropped)="onDrop($event)"
+        class="task-container"
+      >
         @if(done.length > 0){ @for(doneTask of feedback; track doneTask){
         <div class="task-card" cdkDrag>
           <span class="task-category">{{ doneTask.category }}</span>

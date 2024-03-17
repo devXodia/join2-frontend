@@ -2,18 +2,26 @@ import { Component } from '@angular/core';
 import { CdkDrag } from '@angular/cdk/drag-drop';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { Task } from '../../../interfaces/task.interface';
+import {
+  CdkDragDrop,
+  moveItemInArray,
+  transferArrayItem,
+  CdkDropList,
+  DragDropModule,
+} from '@angular/cdk/drag-drop';
+
 @Component({
   selector: 'app-board',
   templateUrl: './board.component.html',
   styleUrl: './board.component.scss',
-  imports: [MatProgressBarModule, CdkDrag],
+  imports: [MatProgressBarModule, CdkDrag, CdkDropList, DragDropModule],
   standalone: true,
 })
 export class BoardComponent {
-  todo: Task[] = [];
-  progress: Task[] = [];
-  feedback: Task[] = [];
-  done: Task[] = [];
+  todo: any = [];
+  progress: any = [];
+  feedback: any = [];
+  done: any = [];
 
   ngOnInit() {
     const newTask: Task = {
@@ -26,6 +34,26 @@ export class BoardComponent {
       subtasks: [],
     };
 
-    this.progress.push(newTask);
+    this.done.push(newTask);
+  }
+
+  onDrop(event: CdkDragDrop<string[]>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
+    } else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
+    }
+
+    console.log('previous container ', event.previousContainer);
+    console.log('current', event.container);
   }
 }
