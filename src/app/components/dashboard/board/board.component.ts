@@ -34,7 +34,7 @@ export class BoardComponent {
       subtasks: [],
     };
 
-    this.done.push(newTask);
+    this.todo.push(newTask);
   }
 
   onDrop(event: CdkDragDrop<string[]>) {
@@ -53,7 +53,9 @@ export class BoardComponent {
       );
     }
 
-    console.log('previous container ', event.previousContainer);
-    console.log('current', event.container);
+    console.log('todo array', this.todo);
+    console.log('progress array', this.progress);
+    console.log('feedback array', this.feedback);
+    console.log('done array', this.done);
   }
 }

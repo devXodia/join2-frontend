@@ -167,15 +167,18 @@
     <div class="done-section">
       <div class="section-title">
         <span class="title">Done</span>
+        <img
+          class="task-icon"
+          src="../../../../assets/img/add-task-board-btn.png"
+        />
       </div>
       <div
         cdkDropList
-        #doneList="cdkDropList"
         [cdkDropListData]="done"
         (cdkDropListDropped)="onDrop($event)"
         class="task-container"
       >
-        @if(done.length > 0){ @for(doneTask of feedback; track doneTask){
+        @if(done.length > 0){ @for(doneTask of done; track doneTask){
         <div class="task-card" cdkDrag>
           <span class="task-category">{{ doneTask.category }}</span>
           <div class="task-card-titles">
