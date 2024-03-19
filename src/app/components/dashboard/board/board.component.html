@@ -30,7 +30,9 @@
       >
         @if(todo.length > 0){ @for(todoTask of todo; track todoTask){
         <div class="task-card" cdkDrag>
-          <span class="task-category">{{ todoTask.category }}</span>
+          <div class="task-category">
+            <span class="task-category-name">{{ todoTask.category }}</span>
+          </div>
           <div class="task-card-titles">
             <span class="task-card-title">{{ todoTask.title }}</span>
             <span class="task-card-description">{{
@@ -79,7 +81,9 @@
         @if(progress.length > 0){ @for(progressTask of progress; track
         progressTask){
         <div class="task-card" cdkDrag>
-          <span class="task-category">{{ progressTask.category }}</span>
+          <div class="task-category">
+            <span class="task-category-name">{{ progressTask.category }}</span>
+          </div>
           <div class="task-card-titles">
             <span class="task-card-title">{{ progressTask.title }}</span>
             <span class="task-card-description">{{
@@ -130,7 +134,9 @@
         @if(feedback.length > 0){ @for(feedbackTask of feedback; track
         feedbackTask){
         <div class="task-card" cdkDrag>
-          <span class="task-category">{{ feedbackTask.category }}</span>
+          <div class="task-category">
+            <span class="task-category-name">{{ feedbackTask.category }}</span>
+          </div>
           <div class="task-card-titles">
             <span class="task-card-title">{{ feedbackTask.title }}</span>
             <span class="task-card-description">{{
@@ -180,7 +186,9 @@
       >
         @if(done.length > 0){ @for(doneTask of done; track doneTask){
         <div class="task-card" cdkDrag>
-          <span class="task-category">{{ doneTask.category }}</span>
+          <div class="task-category">
+            <span class="task-category-name">{{ doneTask.category }}</span>
+          </div>
           <div class="task-card-titles">
             <span class="task-card-title">{{ doneTask.title }}</span>
             <span class="task-card-description">{{

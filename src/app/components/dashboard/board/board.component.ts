@@ -34,7 +34,18 @@ export class BoardComponent {
       subtasks: [],
     };
 
+    const secondTask: Task = {
+      title: 'Second task',
+      description: 'Hello World!',
+      duedate: new Date(),
+      prio: 'high',
+      assignedTo: ['Alen Alduk'],
+      category: 'Social Media',
+      subtasks: [],
+    };
+
     this.todo.push(newTask);
+    this.feedback.push(secondTask);
   }
 
   onDrop(event: CdkDragDrop<string[]>) {

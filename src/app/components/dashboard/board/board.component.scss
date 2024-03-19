@@ -140,7 +140,12 @@
   background-color: #ff7a00;
   padding: 4px 16px;
   border-radius: 10px;
-  width: 40%;
+  text-align: center;
+  display: flex;
+  width: 50%;
+  span {
+    flex: 1;
+  }
 }
 
 .task-card-title {
