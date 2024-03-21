@@ -69,4 +69,6 @@ export class BoardComponent {
     console.log('feedback array', this.feedback);
     console.log('done array', this.done);
   }
+
+  // test
 }
