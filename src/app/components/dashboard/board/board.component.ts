@@ -34,18 +34,7 @@ export class BoardComponent {
       subtasks: [],
     };
 
-    const secondTask: Task = {
-      title: 'Second task',
-      description: 'Hello World!',
-      duedate: new Date(),
-      prio: 'high',
-      assignedTo: ['Alen Alduk'],
-      category: 'Social Media',
-      subtasks: [],
-    };
-
     this.todo.push(newTask);
-    this.feedback.push(secondTask);
   }
 
   onDrop(event: CdkDragDrop<string[]>) {
@@ -63,12 +52,5 @@ export class BoardComponent {
         event.currentIndex
       );
     }
-
-    console.log('todo array', this.todo);
-    console.log('progress array', this.progress);
-    console.log('feedback array', this.feedback);
-    console.log('done array', this.done);
   }
-
-  // test
 }
