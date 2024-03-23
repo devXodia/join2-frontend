@@ -9,12 +9,30 @@ import {
   CdkDropList,
   DragDropModule,
 } from '@angular/cdk/drag-drop';
+import {
+  MatDialog,
+  MAT_DIALOG_DATA,
+  MatDialogRef,
+  MatDialogTitle,
+  MatDialogContent,
+  MatDialogActions,
+  MatDialogClose,
+  MatDialogModule,
+} from '@angular/material/dialog';
+import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
 
 @Component({
   selector: 'app-board',
   templateUrl: './board.component.html',
   styleUrl: './board.component.scss',
-  imports: [MatProgressBarModule, CdkDrag, CdkDropList, DragDropModule],
+  imports: [
+    MatProgressBarModule,
+    CdkDrag,
+    CdkDropList,
+    DragDropModule,
+    MatDialogModule,
+    EditDialogComponent,
+  ],
   standalone: true,
 })
 export class BoardComponent {
@@ -22,6 +40,8 @@ export class BoardComponent {
   progress: any = [];
   feedback: any = [];
   done: any = [];
+
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit() {
     const newTask: Task = {
@@ -52,5 +72,15 @@ export class BoardComponent {
         event.currentIndex
       );
     }
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(EditDialogComponent, {
+      data: { name: 'test' },
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log('The dialog was closed');
+    });
   }
 }

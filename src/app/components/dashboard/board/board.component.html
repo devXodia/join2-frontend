@@ -29,7 +29,7 @@
         class="task-container"
       >
         @if(todo.length > 0){ @for(todoTask of todo; track todoTask){
-        <div class="task-card" cdkDrag>
+        <div class="task-card" cdkDrag (click)="openDialog()">
           <div class="task-category">
             <span class="task-category-name">{{ todoTask.category }}</span>
           </div>
@@ -80,7 +80,7 @@
       >
         @if(progress.length > 0){ @for(progressTask of progress; track
         progressTask){
-        <div class="task-card" cdkDrag>
+        <div class="task-card" cdkDrag (click)="openDialog()">
           <div class="task-category">
             <span class="task-category-name">{{ progressTask.category }}</span>
           </div>
@@ -133,7 +133,7 @@
       >
         @if(feedback.length > 0){ @for(feedbackTask of feedback; track
         feedbackTask){
-        <div class="task-card" cdkDrag>
+        <div class="task-card" cdkDrag (click)="openDialog()">
           <div class="task-category">
             <span class="task-category-name">{{ feedbackTask.category }}</span>
           </div>
@@ -185,7 +185,7 @@
         class="task-container"
       >
         @if(done.length > 0){ @for(doneTask of done; track doneTask){
-        <div class="task-card" cdkDrag>
+        <div class="task-card" cdkDrag (click)="openDialog()">
           <div class="task-category">
             <span class="task-category-name">{{ doneTask.category }}</span>
           </div>
