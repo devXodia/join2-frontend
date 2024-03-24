@@ -76,7 +76,9 @@ export class BoardComponent {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(EditDialogComponent, {
-      data: { name: 'test' },
+      data: {
+        name: 'test',
+      },
     });
 
     dialogRef.afterClosed().subscribe((result) => {

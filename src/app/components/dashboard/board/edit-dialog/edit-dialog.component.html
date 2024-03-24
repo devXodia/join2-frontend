@@ -1,1 +1,39 @@
-<p>edit-dialog works!</p>
+<div class="dialog-container">
+  <div class="category">
+    <div class="task-category">
+      <span class="task-category-name">Technical Task</span>
+    </div>
+    <img
+      class="close"
+      (click)="onNoClick()"
+      src="../../../../../assets/img/close.png"
+      alt="cancel"
+    />
+  </div>
+
+  <h1>Kochwelt Page & Recipe Recommender</h1>
+
+  <div class="description">
+    <span class="description"
+      >Build start page with recipe recommendation.</span
+    >
+  </div>
+
+  <div class="due-date-container">
+    <span class="due-date-title">Due date: </span>
+  </div>
+
+  <div class="prio-container">
+    <span class="prio-title">Priority: </span>
+  </div>
+
+  <div class="assign-container">
+    <span class="assign-contact-title">Assigned To:</span>
+    <div class="assigend-contacts"></div>
+  </div>
+
+  <div class="subtasks-container">
+    <span class="subtasks-container-title">Subtasks:</span>
+    <div class="subtasks"></div>
+  </div>
+</div>
